@@ -1,37 +1,57 @@
 'number' + 3 + 3
+// number3 + 3 = number33, simple concat.
 
 null + 3
+// nothing + 3 = 3
 
 5 && "qwerty"
+// Will return a second one "qwerty", because 5 (first one) is false positive. Very strange logic to me)
 
 +'40' + +'2' + "hillel";
+// 42hillel, simple concat.
 
 '10' - 5 === 6;
+// 10-5 = 5, compare 5 === 6, will return false
 
 true + false
+// true returns 1, false returns 0, 1+0 = 1
 
 '4px' - 3
+// '4px' is NaN, so expr. will return NaN
 
 '4' - 3
+// 4-3 = 1
 
 '6' + 3 ** 0;
+// concat. 6 + 1 = 61. So concat. workrs when sum? And when it minus than integer? 
 
 12 / '6'
+// 12/6 = 2
 
 '10' + (5 === 6);
+// 10false, at first compare expr. in brackets, it is false, than simple concat.
+
 
 null == ''
+// false, do not know why
 
 3 ** (9 / 3);
+// 3**3 = 27
 
 !!'false' == !!'true'
+// true, do not know why
 
 0 || '0' && 1
+// at first '0' && 1 will return 1, than 0 || 1, will return 1
 
 (+null == false) < 1;
+// at first +null will return 0, than 0 == false (is the same as 0 == 0), will return true, than compare true < 1 (the same as 1 < 1), will return false
 
 false && true || true
+// at first && will return true, than true || true, will return true
 
 false && (false || true);
+// at first false || true will return false, than false && false, will return false
 
 (+null == false) < 1 ** 5;
+// at first +null will return 0, than 0 == false (is the same as 0 == 0), will return true, than 1**5 will return 1 (true), and compare true < true, will return false
